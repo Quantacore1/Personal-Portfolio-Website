@@ -1,0 +1,384 @@
+*{
+    margin: 0%; 
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1e1e1e;
+    font-family: sans-serif;
+    color: #a0a0a0;
+    line-height: 1.6;/*distance between lines*/
+}
+.main-container{
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: 350px 1fr;/*for left container 350 baki bachega vo next vale ko*/
+    gap: 50px;
+    padding-top: 40px;
+    margin: auto;/*jitna left mai space utna right mai,cause they are block elements*/
+    
+}
+.sidebar{/*this is for the left side */
+    height: 90vh;
+    background-color: #2a2a2a;
+    border-radius: 16px;
+    border: 1px solid #3a3a3a;
+    padding: 40px;
+    position: sticky;
+    top: 40px; 
+}
+.main-content{
+   /* height: 90vh; , by commenting this the height will not be fixed*/ 
+    background-color: #2a2a2a;
+    border-radius: 16px;
+    border: 1px solid #3a3a3a; 
+    padding: 40px;
+}
+/* profile section*/
+.profile img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 1px solid #3a3a3a;
+}
+.profile h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+.profile p{
+    background-color: #1e1e1e;
+    padding: 5px 15px;
+    color: #ffbf00;
+    border: 1px solid #3a3a3a;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.profile{
+    text-align: center;
+}
+/* Contact section*/
+.contact{/*this will draw a border*/
+    margin: 30px;
+    border-top: 2px solid #3a3a3a;
+    padding-top: 20px;
+}
+.label{
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #a0a0a0;
+}
+.value{
+    color:#e0e0e0 ;
+    text-decoration: none;
+}
+.email , .phone , .location{
+    margin-bottom: 15px;
+}
+/*Social media*/
+.social{
+    margin-top: 30px;
+    border-top: 2px solid #3a3a3a;
+    padding-top: 20px;
+    text-align: center;
+}
+.social img{
+    height:24px ;
+    width: 24px;
+    margin-left: 5px ;
+    filter: grayscale(1) invert(0.7);/*this will apply filter over the icon */
+    transition: filter 0.3s ease;
+}
+.social img:hover{
+    filter: grayscale(0) invert(0);/*this will remove the filter when you hover*/
+}
+/*Main content*/
+/*Navigation*/
+.navigation{
+    border-bottom: 2px solid #3a3a3a;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: #a0a0a0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  
+}
+.Active,nav a:hover{
+    color: #ffbf00;
+}
+/*About me section*/
+.heading{/*this is for about me heading*/
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.line{/*yellow line under about me */
+    width: 60px;
+    height: 5px;
+    background-color: #ffbf00;
+    margin-bottom: 15px;
+}
+.content{/*this will align the about me content*/
+    text-align: justify;
+    color: #a0a0a0;
+}
+#about{
+    margin-bottom: 40px;
+}
+/*Skills section*/
+.grid-container{ /*this will create sections*/
+    display: grid;
+    grid-template-columns:repeat(auto-fit ,minmax(120px,1fr)) ;/*this is for responsive website different layout for different screens*/
+    gap: 30px;
+}
+.item img{ /*image icons*/
+    height: 48px;
+    width: 48px;
+    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+}
+.item{/*this will create boxes*/
+    padding: 20px;
+    border:2px solid #3a3a3a;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.3s ease ,boxshadow 0.3s ease;
+}
+.item h3{/*text under icons*/
+    font-size: 1rem;
+    font-weight: 500;
+}
+.item:hover{/*this will hover*/
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);/*a for opacity control*/
+}
+/*education section*/
+#education{
+    margin-top: 30px;
+}
+.edtech{
+    position: relative;
+    margin-top: 20px;
+}
+/*.edtech{
+    padding-left: 20px;, if we will not remove this then the dot will appear on text
+}*/
+.year{
+    font-size: 0.9rem;
+    color:#a0a0a0;
+    margin-bottom: 5px;
+}
+.degree{
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.college{
+    font-style: italic;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+}
+.work{
+    color: #a0a0a0;
+}
+.edfirst, .edsecond{
+    margin-bottom: 30px; 
+    position: relative;
+    padding-left: 25px;
+}
+.goal{/*This will be the yellow dot*/
+ height: 15px;
+ width: 15px;
+ border-radius: 50%;
+ border: 3px solid #ffbf00;
+ position: absolute;
+ top: 5px;
+ left: 0px;
+ z-index: 5;/*this is to make the dot above the line*/
+}
+.liner{/*this will */
+    position: absolute;
+    width: 2px;/*now go to edtech(parent)*/
+    top: 0px;
+    bottom: 0px; 
+    left: 5px;
+    border: 2px solid #3a3a3a;
+}
+/*Portfolio*/
+.project-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.project{
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    border: 1px solid #3a3a3a;
+    overflow: hidden;
+    transition: transform 0.5s ease , box-shadow 0.5s ease;/*used for hover*/
+}
+.project:hover{
+    transform:translateY(-10px) ;/*this will hover box upwards*/
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);/*for shadow*/
+
+}
+.project img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;/*zoom outs the picture*/
+}
+.card{/*content inside card*/
+    padding: 20px;
+}
+.card h3{
+    color: #e0e0e0;
+}
+.card p{ /*paragraph card*/
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.card span{/*this is for html and css*/
+    background-color: rgba(255,191,0,0.1);
+    color: #ffbf00;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+
+/*responsive website*/
+
+@media(max-width:1024px){/*for tabs*/
+    .main-container{/*reduce spacing btw sidebar and content*/
+        grid-template-columns: 300px 1fr;
+        gap: 30px;
+        padding: 20px;
+    }
+    .sidebar{/*sidebar smaller*/
+        padding: 30px;
+    }
+    .project-container{/*card one below other*/
+        grid-template-columns: 1fr;
+    }
+
+
+}/*mobiles*/
+@media(max-width:768px){
+    .main-container{/*two coloumn into single coloumn*/
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+    .sidebar{/*no sticky sidebar*/
+        position: static;
+        height: auto;
+        width: 100%;
+    }
+    .main-content{/*reduces padding*/
+        padding: 25px;
+    }
+    nav{/*nav to next line*/
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .project-container{/*single container project*/
+        grid-template-columns: 1fr;
+    }
+    .grid-container{/*skills 2 colomns instead of 5*/
+        grid-template-columns: repeat(2,1fr);
+    }
+    .heading{/*smaller heading*/
+        font-size: 1.8rem;
+    }
+    .content{/*smaller about me */
+        font-size: 0.95rem;
+    }
+}
+
+/*Now adding some effects */
+.shiny-text{
+
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    background: linear-gradient(
+        90deg,
+        #e0e0e0 0%,
+        #ffffff 25%,
+        #ffbf00 50%,
+        #ffffff 75%,
+        #e0e0e0 100%
+
+    );
+
+    background-size: 200% auto;
+
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    display: block;
+
+    animation: shine 8s linear infinite;
+}
+
+@keyframes shine{
+    from{
+        background-position: -200% center;
+    }
+
+    to{
+        background-position: 200% center;
+    }
+}
+/*adding mettalic line on skills section*/
+
+.glare-card{
+    position: relative;
+    overflow: hidden;
+}
+
+.glare-card::before{
+    content: "";
+    position: absolute;
+
+    top: -50%;
+    left: -75%;
+
+    width: 50%;
+    height: 200%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.15),
+        transparent
+    );
+
+    transform: rotate(25deg);
+    transition: left 0.7s ease;
+}
+
+.glare-card:hover::before{
+    left: 150%;
+}
+
+/**/
